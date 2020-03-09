@@ -7,4 +7,5 @@
         return "Reprovou!A sua nota final é de "+finalGrade;
     }
 }
+
 console.log(calculateFinalGrade(20,5));
