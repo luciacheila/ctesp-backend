@@ -10,7 +10,7 @@ function calculaIMC(peso, altura) {
         console.log("Obeso");
     }
 }
-calculaIMC(80, 1.70);
+calculaIMC(60, 1.60);
 
 function fraseInversa(str) {
     var splitted = str.split(" ");
@@ -143,7 +143,7 @@ function listGrades(array) {
 }
 listGrades(students);
 
-function showBestGrade(array) {
+function showBest(array) {
     var grade = array[0].grade;
     array.forEach(element => {
         if (element.grade > grade) {
@@ -153,10 +153,10 @@ function showBestGrade(array) {
     return grade;
 }
 
-var bestGrade = showBestGrade(students);
-console.log("A melhor nota foi: " + bestGrade);
+var best = showBest(students);
+console.log("A melhor nota foi: " + best);
 
-showBestGrade(students);
+showBest(students);
 
 function showWorstGrade(array) {
     var grade = array[0].grade;
@@ -192,13 +192,13 @@ function calcAverageGrade(array) {
         }
     });
 
-    console.log("O aluno com nota mais próxima da media é o nr: " + studentNumber + " e teve a nota: " + studentGrade);
+    console.log("O aluno com nota mais próxima da media é o número: " + studentNumber + " e teve a nota: " + studentGrade);
 
 }
 
 calcAverageGrade(students);
 
-function calcFailedGrades(array) {
+function calcFailed(array) {
     var count = 0;
     array.forEach(element => {
         if (element.grade < 9.5) {
@@ -209,11 +209,11 @@ function calcFailedGrades(array) {
 
 }
 
-var failedGradesCount = calcFailedGrades(students);
-console.log("Total de notas negativas: " + failedGradesCount);
+var failedCount = calcFailed(students);
+console.log("Total de notas negativas: " + failedCount);
 
 
-function calcPassedGrades(array) {
+function calcPassed(array) {
     var count = 0;
     array.forEach(element => {
         if (element.grade > 9.5) {
@@ -224,5 +224,5 @@ function calcPassedGrades(array) {
 
 }
 
-var passedGradesCount = calcPassedGrades(students);
-console.log("Total de notas positivas: " + passedGradesCount);
+var passedCount = calcPassed(students);
+console.log("Total de notas positivas: " + passedCount);
