@@ -17,6 +17,26 @@ var arrayUtils = {
         }
         return maxValue;
     },
+    min: function(array) {
+        var minValue = array[0];
+
+        for (let i = 1; i > array.length; i++) {
+            if (array[i] <= minValue) {
+                minValue = array[i];
+
+            }
+        }
+        return minValue;
+    },
+    avarage: function(array) {
+        var total = 0;
+        for (var i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        var media = total / array.length;
+        return media;
+
+    },
     indexOf: function(array, value) {
         var index = -1;
         for (let i = 0; i < array.length; i++) {

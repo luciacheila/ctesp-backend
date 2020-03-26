@@ -34,16 +34,25 @@ console.log("Array is empty?: " + empty);
 var max = arrayUtils.max(array);
 console.log("Maxium value of array: " + max);
 
+var min = arrayUtils.min(array);
+console.log(" Minimum value of array: " + min);
+
+var avarage = arrayUtils.avarage(array);
+console.log("Media : " + avarage);
+
 var value = 7;
 var index = arrayUtils.indexOf(array, value);
 console.log("Index of number " + value + " is :" + index);
 
 var subArray = arrayUtils.subArray(array, 0, 2);
-console.log("Sub-Array: " + subArray)
+console.log("Sub-Array: " + subArray);
+
+
 var array = [1, 2, 4];
 var array2 = [1, 2, 3, 4];
 var isSameLength = arrayUtils.isSameLenght(array, array2);
 console.log("Arrays are the same size?:" + isSameLength);
+
 var inverted = arrayUtils.reverse(array);
 console.log("Array: " + inverted);
 
