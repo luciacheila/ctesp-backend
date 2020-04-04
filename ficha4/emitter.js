@@ -1,14 +1,14 @@
 var emitter = class Emitter {
     constructor() {
         this.events = {};
-        this.on = function(type, listener) {
+        emitter.prototype.on = function(type, listener) {
                 if (this.events[type] == undefined) {
                     this.events[type] = [];
                 }
                 // this.events[type] = [];
                 this.events[type].push(listener);
             },
-            this.emit = function(type) {
+            emitter.prototype.emit = function(type) {
                 this.events[type].forEach(element => {
                     element();
                 });
@@ -18,7 +18,7 @@ var emitter = class Emitter {
 
 
 //instaciar a class Emitter
-var emtr = new Emitter();
+/* var emtr = new Emitter();
 emtr.on("LOGIN", function() {
     console.log("Welcome user");
 });
@@ -37,6 +37,6 @@ emtr.on("LOGOUT", function() {
     console.log("Goodbye user");
 });
 emtr.emit("LOGIN");
-emtr.emit("LOGOUT");
+emtr.emit("LOGOUT"); */
 
 module.exports = emitter;
